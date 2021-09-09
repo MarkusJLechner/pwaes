@@ -16,5 +16,7 @@ const router = createRouter({
 
 const app = createApp(App).use(router).use(store).use(createMetaManager())
 
-await router.isReady()
-app.mount('#app')
+;(async () => {
+  await router.isReady()
+  app.mount('#app')
+})()
